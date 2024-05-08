@@ -20,6 +20,6 @@ export interface IProject {
   phases: IProjectPhase[];
   currentPhaseIndex: number;
   periodActivities: IActivities[];
-  problems?: string[];
+  problems: string[];
   nextSteps: string[];
 }

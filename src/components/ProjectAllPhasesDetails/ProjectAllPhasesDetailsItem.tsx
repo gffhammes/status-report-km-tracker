@@ -16,11 +16,11 @@ export const ProjectAllPhasesDetailsItem = ({
 }: IProjectAllPhasesDetailsItemProps) => {
   return (
     <Box>
-      <Typography>{phase.name}</Typography>
+      <Typography fontSize={24}>{phase.name}</Typography>
 
-      {phase.activities.map((activity) => {
+      {phase.activities.map((activity, index) => {
         return (
-          <Stack>
+          <Stack key={index}>
             <FormControlLabel
               control={
                 <Checkbox

@@ -1,4 +1,10 @@
-import { Container, createTheme, Stack, ThemeProvider } from "@mui/material";
+import {
+  Box,
+  Container,
+  createTheme,
+  Stack,
+  ThemeProvider,
+} from "@mui/material";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -11,9 +17,16 @@ import { ProjectProblems } from "./components/ProjectProblems";
 import { ProjectAllPhasesDetails } from "./components/ProjectAllPhasesDetails/ProjectAllPhasesDetails";
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#0066FF",
+    },
+  },
   typography: {
     h2: {
-      fontSize: 24,
+      fontSize: 16,
+      fontWeight: "bold",
+      color: "#cbcbcb",
       textTransform: "uppercase",
     },
     allVariants: {
@@ -33,11 +46,11 @@ function App() {
         <ProjectPeriodActivities />
 
         <Container>
-          <Stack direction="row" gap={4}>
+          <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
             <ProjectProblems />
 
             <ProjectNextSteps />
-          </Stack>
+          </Box>
         </Container>
 
         <ProjectAllPhasesDetails />

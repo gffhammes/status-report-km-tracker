@@ -199,7 +199,28 @@ export const projectData: IProject = {
   generalStatus: "good",
   currentPhaseIndex: 1,
   phases: kmTrackerPhases,
-  nextSteps: [],
+  nextSteps: ["Finalizar integração WKF", "Testar API Jira"],
   problems: [],
-  periodActivities: [],
+  periodActivities: [
+    {
+      name: "Criar script de abertura de OS no WKF",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Criar script de fechamento de OS no WKF",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Criar scripts de integração de OS no KM Tracker para refletir no WKF",
+      expectedDays: 4,
+      status: "doing",
+    },
+    {
+      name: "Testar integração Jira",
+      expectedDays: 4,
+      status: "to do",
+    },
+  ],
 };

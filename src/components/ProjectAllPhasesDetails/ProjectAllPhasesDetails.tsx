@@ -7,12 +7,14 @@ export interface IProjectAllPhasesDetailsProps {}
 export const ProjectAllPhasesDetails = () => {
   return (
     <Container>
-      <Typography variant="h2">DETALHE DAS FASES</Typography>
+      <Stack gap={2}>
+        <Typography variant="h2">DETALHE DAS FASES</Typography>
 
-      <Stack gap={4}>
-        {projectData.phases.map((phase, index) => {
-          return <ProjectAllPhasesDetailsItem phase={phase} key={index} />;
-        })}
+        <Stack gap={4}>
+          {projectData.phases.map((phase, index) => {
+            return <ProjectAllPhasesDetailsItem phase={phase} key={index} />;
+          })}
+        </Stack>
       </Stack>
     </Container>
   );
