@@ -30,8 +30,6 @@ const columns: GridColDef<IActivities>[] = [
     headerName: "Status",
     width: 300,
     renderCell: (params) => {
-      console.log(params.value);
-
       switch (params.value) {
         case "to do":
           return <Chip label="A fazer" size="small" />;

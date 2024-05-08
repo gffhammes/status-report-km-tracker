@@ -22,4 +22,8 @@ export interface IProject {
   periodActivities: IActivities[];
   problems: string[];
   nextSteps: string[];
+  currentPeriod: {
+    start: Date;
+    end: Date;
+  };
 }

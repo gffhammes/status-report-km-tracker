@@ -38,6 +38,17 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Box
+        position="sticky"
+        top={0}
+        zIndex={999}
+        sx={{ width: "100%", backgroundColor: "primary.main", py: 2 }}
+      >
+        <Container>
+          <img src="/isolutions-logo.svg" alt="iSolutions" height={32} />
+        </Container>
+      </Box>
+
       <Stack gap={8} sx={{ py: 8 }}>
         <ProjectGeneralData />
 

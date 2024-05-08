@@ -223,4 +223,8 @@ export const projectData: IProject = {
       status: "to do",
     },
   ],
+  currentPeriod: {
+    start: new Date(2024, 4, 2),
+    end: new Date(2024, 4, 9),
+  },
 };
