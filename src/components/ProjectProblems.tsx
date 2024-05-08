@@ -1,5 +1,5 @@
 export interface IProjectProblemsProps {}
 
-export const ProjectProblems = (props: IProjectProblemsProps) => {
+export const ProjectProblems = () => {
   return <>ProjectProblems</>;
 };
