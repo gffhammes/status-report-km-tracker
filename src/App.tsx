@@ -38,7 +38,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Stack gap={8}>
+      <Stack gap={8} sx={{ py: 8 }}>
         <ProjectGeneralData />
 
         <ProjectPhasesSummary />
