@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { projectData } from "../data/projectData";
 
 export interface IProjectGeneralDataProps {}
@@ -6,7 +6,9 @@ export interface IProjectGeneralDataProps {}
 export const ProjectGeneralData = () => {
   return (
     <Container>
-      <Box>{projectData.name}</Box>
+      <Box>
+        <Typography variant="h1">{projectData.name}</Typography>
+      </Box>
     </Container>
   );
 };

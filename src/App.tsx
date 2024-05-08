@@ -16,6 +16,9 @@ const theme = createTheme({
       fontSize: 24,
       textTransform: "uppercase",
     },
+    allVariants: {
+      color: "#7c7c7c",
+    },
   },
 });
 
