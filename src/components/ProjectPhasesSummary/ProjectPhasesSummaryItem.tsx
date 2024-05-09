@@ -16,9 +16,21 @@ export const ProjectPhasesSummaryItem = ({
 
   const getDateText = () => {
     if (isActivePhase) {
+      if (phase.expectedEndDate) {
+        return (
+          "Previsão de entrega em " +
+          phase.expectedEndDate.toLocaleDateString("pt-BR")
+        );
+      }
+
+      const expectedEndDate = new Date(phase.expectedStartDate);
+
+      expectedEndDate.setDate(
+        expectedEndDate.getDate() + phase.expectedDurationInDays + 1
+      );
+
       return (
-        "Previsão de entrega em " +
-        phase.expectedEndDate.toLocaleDateString("pt-BR")
+        "Previsão de entrega em " + expectedEndDate.toLocaleDateString("pt-BR")
       );
     }
 

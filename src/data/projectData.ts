@@ -25,9 +25,11 @@ export const kmTrackerPhases: IProjectPhase[] = [
     expectedEndDate: new Date(2024, 3, 26),
     actualEndDate: new Date(2024, 3, 30),
     completionPercentage: 1,
+    expectedDurationInDays: 10,
   },
   {
     name: "Integração OS WKF",
+    expectedDurationInDays: 15,
     activities: [
       {
         name: "Replicar abertura de OS do WKF no KMTracker",
@@ -45,21 +47,7 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "doing",
       },
     ],
-    expectedStartDate: new Date(2024, 3, 1),
-    expectedEndDate: new Date(2024, 4, 17),
-    completionPercentage: 0.1,
-  },
-  {
-    name: "Integração Cliente WKF",
-    activities: [
-      {
-        name: "Ao atualizar os clientes (terminais) no WKF, atualizar também no KMTracker",
-        expectedDays: 10,
-        status: "to do",
-      },
-    ],
-    expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    expectedStartDate: new Date(2024, 4, 1),
     completionPercentage: 0.1,
   },
   {
@@ -92,11 +80,25 @@ export const kmTrackerPhases: IProjectPhase[] = [
       },
     ],
     expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    completionPercentage: 0.1,
+    expectedDurationInDays: 30,
+  },
+  {
+    name: "Integração Cliente WKF",
+    expectedDurationInDays: 15,
+    activities: [
+      {
+        name: "Ao atualizar os clientes (terminais) no WKF, atualizar também no KMTracker",
+        expectedDays: 10,
+        status: "to do",
+      },
+    ],
+    expectedStartDate: new Date(2024, 6, 1),
     completionPercentage: 0.1,
   },
   {
     name: "Integração com VELOE/ALELO",
+    expectedDurationInDays: 10,
     activities: [
       {
         name: "Consultar qual o saldo do cartão do técnico",
@@ -124,12 +126,12 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "to do",
       },
     ],
-    expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    expectedStartDate: new Date(2024, 6, 22),
     completionPercentage: 0.1,
   },
   {
     name: "Implementação de relatório fotográfico",
+    expectedDurationInDays: 15,
     activities: [
       {
         name: "Anexo de fotos ao cliente (terminal) e ao atendimento",
@@ -147,12 +149,12 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "to do",
       },
     ],
-    expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    expectedStartDate: new Date(2024, 7, 5),
     completionPercentage: 0.1,
   },
   {
     name: "Integração com sistema de registro de ponto",
+    expectedDurationInDays: 10,
     activities: [
       {
         name: "Criar integração com o sistema de ponto já existente para trazer esses dados para dentro do KMTracker",
@@ -170,12 +172,12 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "to do",
       },
     ],
-    expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    expectedStartDate: new Date(2024, 7, 26),
     completionPercentage: 0.1,
   },
   {
     name: "Exportação de plantas e roteirização em KMZ",
+    expectedDurationInDays: 10,
     activities: [
       {
         name: "Permitir exportar as plantas em KMZ",
@@ -188,8 +190,7 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "to do",
       },
     ],
-    expectedStartDate: new Date(2024, 4, 20),
-    expectedEndDate: new Date(2024, 4, 17),
+    expectedStartDate: new Date(2024, 8, 9),
     completionPercentage: 0.1,
   },
 ];
@@ -199,7 +200,7 @@ export const projectData: IProject = {
   generalStatus: "good",
   currentPhaseIndex: 1,
   phases: kmTrackerPhases,
-  nextSteps: ["Finalizar integração WKF", "Testar API Jira"],
+  nextSteps: ["Finalizar integração WKF", "Testar API Jira", "Testar API ADP"],
   problems: [],
   periodActivities: [
     {
@@ -211,6 +212,11 @@ export const projectData: IProject = {
       name: "Criar script de fechamento de OS no WKF",
       expectedDays: 4,
       status: "done",
+    },
+    {
+      name: "Criar permissões de acesso",
+      expectedDays: 4,
+      status: "doing",
     },
     {
       name: "Criar scripts de integração de OS no KM Tracker para refletir no WKF",

@@ -8,10 +8,11 @@ export interface IProjectPhase {
   name: string;
   expectedStartDate: Date;
   actualStartDate?: Date;
-  expectedEndDate: Date;
+  expectedEndDate?: Date;
   actualEndDate?: Date;
   completionPercentage: number;
   activities: IActivities[];
+  expectedDurationInDays: number;
 }
 
 export interface IProject {
