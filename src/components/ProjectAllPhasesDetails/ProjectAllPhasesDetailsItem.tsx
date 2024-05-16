@@ -1,11 +1,13 @@
 import {
   Box,
   Checkbox,
+  Chip,
   FormControlLabel,
   Stack,
   Typography,
 } from "@mui/material";
 import { IProjectPhase } from "../../data/interfaces";
+import { addWorkDays } from "../../helpers/utils";
 
 export interface IProjectAllPhasesDetailsItemProps {
   phase: IProjectPhase;
@@ -14,9 +16,23 @@ export interface IProjectAllPhasesDetailsItemProps {
 export const ProjectAllPhasesDetailsItem = ({
   phase,
 }: IProjectAllPhasesDetailsItemProps) => {
+  const initialDate = phase.expectedStartDate;
+  const finalDate = addWorkDays({
+    initialDate,
+    daysToSum: phase.expectedDurationInDays - 1,
+  });
+
+  const datesText = `de ${initialDate.toLocaleDateString(
+    "pt-BR"
+  )} até ${finalDate.toLocaleDateString("pt-BR")}`;
+
   return (
     <Box>
-      <Typography fontSize={24}>{phase.name}</Typography>
+      <Stack direction="row" alignItems="center" gap={1}>
+        <Typography fontSize={24}>{phase.name}</Typography>
+
+        <Chip label={datesText} size="small" />
+      </Stack>
 
       {phase.activities.map((activity, index) => {
         return (

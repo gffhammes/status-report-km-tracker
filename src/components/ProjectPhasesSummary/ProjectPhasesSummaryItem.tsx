@@ -1,6 +1,7 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { IProjectPhase } from "../../data/interfaces";
 import { projectData } from "../../data/projectData";
+import { addWorkDays } from "../../helpers/utils";
 
 export interface IProjectPhasesSummaryItemProps {
   index: number;
@@ -23,11 +24,10 @@ export const ProjectPhasesSummaryItem = ({
         );
       }
 
-      const expectedEndDate = new Date(phase.expectedStartDate);
-
-      expectedEndDate.setDate(
-        expectedEndDate.getDate() + phase.expectedDurationInDays + 1
-      );
+      const expectedEndDate = addWorkDays({
+        initialDate: phase.expectedStartDate,
+        daysToSum: phase.expectedDurationInDays,
+      });
 
       return (
         "Previsão de entrega em " + expectedEndDate.toLocaleDateString("pt-BR")

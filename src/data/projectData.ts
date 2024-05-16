@@ -25,11 +25,11 @@ export const kmTrackerPhases: IProjectPhase[] = [
     expectedEndDate: new Date(2024, 3, 26),
     actualEndDate: new Date(2024, 3, 30),
     completionPercentage: 1,
-    expectedDurationInDays: 10,
+    expectedDurationInDays: 22,
   },
   {
     name: "Integração OS WKF",
-    expectedDurationInDays: 15,
+    expectedDurationInDays: 13,
     activities: [
       {
         name: "Replicar abertura de OS do WKF no KMTracker",
