@@ -69,11 +69,6 @@ export const kmTrackerPhases: IProjectPhase[] = [
         status: "to do",
       },
       {
-        name: "Criar solicitação de pagamento (integração com Jira)",
-        expectedDays: 10,
-        status: "to do",
-      },
-      {
         name: "Alterar status de OS no WKF ao roteiriza-la",
         expectedDays: 10,
         status: "to do",
@@ -97,9 +92,14 @@ export const kmTrackerPhases: IProjectPhase[] = [
     completionPercentage: 0.1,
   },
   {
-    name: "Integração com VELOE/ALELO",
+    name: "Integrações",
     expectedDurationInDays: 10,
     activities: [
+      {
+        name: "Criar solicitação de pagamento (integração com Jira)",
+        expectedDays: 10,
+        status: "to do",
+      },
       {
         name: "Consultar qual o saldo do cartão do técnico",
         expectedDays: 10,
