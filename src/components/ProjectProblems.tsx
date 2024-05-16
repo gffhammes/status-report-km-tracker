@@ -16,7 +16,7 @@ export const ProjectProblems = () => {
           {projectData.problems.length > 0 ? (
             projectData.problems.map((nextStep, index) => {
               return (
-                <Box component="li" color="primary.main" key={index}>
+                <Box component="li" color="#7c7c7c" key={index}>
                   {nextStep}
                 </Box>
               );

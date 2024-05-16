@@ -34,12 +34,12 @@ export const kmTrackerPhases: IProjectPhase[] = [
       {
         name: "Replicar abertura de OS do WKF no KMTracker",
         expectedDays: 10,
-        status: "doing",
+        status: "done",
       },
       {
         name: "Replicar fechamento de OS do WKF no KMTracker",
         expectedDays: 10,
-        status: "doing",
+        status: "done",
       },
       {
         name: "Replicar movimentação de OS do KMTracker no WKF",
@@ -200,7 +200,11 @@ export const projectData: IProject = {
   generalStatus: "good",
   currentPhaseIndex: 1,
   phases: kmTrackerPhases,
-  nextSteps: ["Finalizar integração WKF", "Testar API Jira", "Testar API ADP"],
+  nextSteps: [
+    "Colocar integração WKF em produção",
+    "Testar API Jira",
+    "Iniciar roteirização",
+  ],
   problems: [],
   periodActivities: [
     {
@@ -214,23 +218,28 @@ export const projectData: IProject = {
       status: "done",
     },
     {
+      name: "Criar script de atualização de OS no WKF",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
       name: "Criar permissões de acesso",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Testar integração Jira",
       expectedDays: 4,
       status: "doing",
     },
     {
       name: "Criar scripts de integração de OS no KM Tracker para refletir no WKF",
       expectedDays: 4,
-      status: "doing",
-    },
-    {
-      name: "Testar integração Jira",
-      expectedDays: 4,
       status: "to do",
     },
   ],
   currentPeriod: {
-    start: new Date(2024, 4, 2),
-    end: new Date(2024, 4, 9),
+    start: new Date(2024, 4, 9),
+    end: new Date(2024, 4, 16),
   },
 };
