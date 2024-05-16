@@ -41,11 +41,6 @@ export const kmTrackerPhases: IProjectPhase[] = [
         expectedDays: 10,
         status: "done",
       },
-      {
-        name: "Replicar movimentação de OS do KMTracker no WKF",
-        expectedDays: 10,
-        status: "doing",
-      },
     ],
     expectedStartDate: new Date(2024, 4, 1),
     completionPercentage: 0.1,
@@ -75,6 +70,11 @@ export const kmTrackerPhases: IProjectPhase[] = [
       },
       {
         name: "Criar solicitação de pagamento (integração com Jira)",
+        expectedDays: 10,
+        status: "to do",
+      },
+      {
+        name: "Alterar status de OS no WKF ao roteiriza-la",
         expectedDays: 10,
         status: "to do",
       },
