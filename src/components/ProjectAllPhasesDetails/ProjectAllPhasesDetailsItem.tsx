@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { IProjectPhase } from "../../data/interfaces";
 import { addWorkDays } from "../../helpers/utils";
+import DateRangeIcon from "@mui/icons-material/DateRange";
 
 export interface IProjectAllPhasesDetailsItemProps {
   phase: IProjectPhase;
@@ -22,7 +23,7 @@ export const ProjectAllPhasesDetailsItem = ({
     daysToSum: phase.expectedDurationInDays - 1,
   });
 
-  const datesText = `de ${initialDate.toLocaleDateString(
+  const datesText = `${initialDate.toLocaleDateString(
     "pt-BR"
   )} até ${finalDate.toLocaleDateString("pt-BR")}`;
 
@@ -31,7 +32,7 @@ export const ProjectAllPhasesDetailsItem = ({
       <Stack direction="row" alignItems="center" gap={1}>
         <Typography fontSize={24}>{phase.name}</Typography>
 
-        <Chip label={datesText} size="small" />
+        <Chip label={datesText} size="small" icon={<DateRangeIcon />} />
       </Stack>
 
       {phase.activities.map((activity, index) => {

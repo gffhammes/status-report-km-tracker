@@ -26,7 +26,7 @@ export const ProjectPhasesSummaryItem = ({
 
       const expectedEndDate = addWorkDays({
         initialDate: phase.expectedStartDate,
-        daysToSum: phase.expectedDurationInDays,
+        daysToSum: phase.expectedDurationInDays - 1,
       });
 
       return (

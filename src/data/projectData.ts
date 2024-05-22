@@ -198,37 +198,31 @@ export const kmTrackerPhases: IProjectPhase[] = [
 export const projectData: IProject = {
   name: "KM Tracker",
   generalStatus: "good",
-  currentPhaseIndex: 1,
+  currentPhaseIndex: 2,
   phases: kmTrackerPhases,
-  nextSteps: [
-    "Colocar integração WKF em produção",
-    "Testar API Jira",
-    "Iniciar roteirização",
-  ],
+  currentPeriod: {
+    start: new Date(2024, 4, 16),
+    end: new Date(2024, 4, 23),
+  },
   problems: [],
   periodActivities: [
     {
-      name: "Criar script de abertura de OS no WKF",
+      name: "Colocar integração WKF/KMTracker em produção",
       expectedDays: 4,
       status: "done",
     },
     {
-      name: "Criar script de fechamento de OS no WKF",
+      name: "Melhorias de experiência/Resolução de bugs",
       expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Criar script de atualização de OS no WKF",
-      expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Criar permissões de acesso",
-      expectedDays: 4,
-      status: "done",
+      status: "doing",
     },
     {
       name: "Testar integração Jira",
+      expectedDays: 4,
+      status: "doing",
+    },
+    {
+      name: "Seleção de clientes para roteirização",
       expectedDays: 4,
       status: "doing",
     },
@@ -238,8 +232,8 @@ export const projectData: IProject = {
       status: "to do",
     },
   ],
-  currentPeriod: {
-    start: new Date(2024, 4, 9),
-    end: new Date(2024, 4, 16),
-  },
+  nextSteps: [
+    "Testar API Jira",
+    "Finalizar seleção de clientes para roteirização",
+  ],
 };
