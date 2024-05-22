@@ -15,7 +15,6 @@ import { ProjectPeriodActivities } from "./components/ProjectPeriodActivities";
 import { ProjectNextSteps } from "./components/ProjectNextSteps";
 import { ProjectProblems } from "./components/ProjectProblems";
 import { ProjectAllPhasesDetails } from "./components/ProjectAllPhasesDetails/ProjectAllPhasesDetails";
-import { GanttChart } from "./components/GanttChart/GanttChart";
 
 const theme = createTheme({
   palette: {
