@@ -43,6 +43,7 @@ export const kmTrackerPhases: IProjectPhase[] = [
       },
     ],
     expectedStartDate: new Date(2024, 4, 1),
+    actualEndDate: new Date(2024, 4, 17),
     completionPercentage: 0.1,
   },
   {
