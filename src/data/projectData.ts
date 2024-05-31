@@ -52,12 +52,12 @@ export const kmTrackerPhases: IProjectPhase[] = [
       {
         name: "Informar quais CLIENTES/OS serão atendidas",
         expectedDays: 10,
-        status: "to do",
+        status: "done",
       },
       {
         name: "Informar ordem de prioridade de atendimentos",
         expectedDays: 10,
-        status: "to do",
+        status: "done",
       },
       {
         name: "Informar valores de combustível/pedágio etc",
@@ -202,39 +202,51 @@ export const projectData: IProject = {
   currentPhaseIndex: 2,
   phases: kmTrackerPhases,
   currentPeriod: {
-    start: new Date(2024, 4, 16),
-    end: new Date(2024, 4, 23),
+    start: new Date(2024, 4, 23),
+    end: new Date(2024, 4, 30),
   },
   problems: [],
   periodActivities: [
     {
-      name: "Colocar integração WKF/KMTracker em produção",
+      name: "Melhorias de experiência/Resolução de bugs",
       expectedDays: 4,
       status: "done",
     },
     {
-      name: "Melhorias de experiência/Resolução de bugs",
+      name: "Seleção de clientes para roteirização",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Alterar cor da topologia com base no status da OS",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Criar roteirização com base nos clientes informados",
       expectedDays: 4,
       status: "doing",
+    },
+    {
+      name: "Obter dados adicionais para realizar a roteirização",
+      expectedDays: 4,
+      status: "doing",
+    },
+    {
+      name: "Apresentar resumo da roteirização em tela",
+      expectedDays: 4,
+      status: "to do",
     },
     {
       name: "Testar integração Jira",
       expectedDays: 4,
-      status: "doing",
-    },
-    {
-      name: "Seleção de clientes para roteirização",
-      expectedDays: 4,
-      status: "doing",
-    },
-    {
-      name: "Criar scripts de integração de OS no KM Tracker para refletir no WKF",
-      expectedDays: 4,
       status: "to do",
     },
+    // {
+    //   name: "Criar scripts de integração de OS no KM Tracker para refletir no WKF",
+    //   expectedDays: 4,
+    //   status: "to do",
+    // },
   ],
-  nextSteps: [
-    "Testar API Jira",
-    "Finalizar seleção de clientes para roteirização",
-  ],
+  nextSteps: ["Testar API Jira", "Finalizar roteirização"],
 };
