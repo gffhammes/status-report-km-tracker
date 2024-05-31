@@ -248,5 +248,9 @@ export const projectData: IProject = {
     //   status: "to do",
     // },
   ],
-  nextSteps: ["Testar API Jira", "Finalizar roteirização"],
+  nextSteps: [
+    "Testar API Jira",
+    "Finalizar roteirização",
+    "Subir dados atualizados",
+  ],
 };
