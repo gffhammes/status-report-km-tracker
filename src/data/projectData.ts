@@ -62,7 +62,7 @@ export const kmTrackerPhases: IProjectPhase[] = [
       {
         name: "Informar valores de combustível/pedágio etc",
         expectedDays: 10,
-        status: "to do",
+        status: "done",
       },
       {
         name: "Puxar a localização do técnico (localiza)",
@@ -202,8 +202,8 @@ export const projectData: IProject = {
   currentPhaseIndex: 2,
   phases: kmTrackerPhases,
   currentPeriod: {
-    start: new Date(2024, 4, 23),
-    end: new Date(2024, 4, 30),
+    start: new Date(2024, 4, 30),
+    end: new Date(2024, 5, 6),
   },
   problems: [],
   periodActivities: [
@@ -225,17 +225,22 @@ export const projectData: IProject = {
     {
       name: "Criar roteirização com base nos clientes informados",
       expectedDays: 4,
-      status: "doing",
+      status: "done",
     },
     {
       name: "Obter dados adicionais para realizar a roteirização",
       expectedDays: 4,
-      status: "doing",
+      status: "done",
     },
     {
       name: "Apresentar resumo da roteirização em tela",
       expectedDays: 4,
-      status: "to do",
+      status: "done",
+    },
+    {
+      name: "Subir dados atualizados",
+      expectedDays: 4,
+      status: "doing",
     },
     {
       name: "Testar integração Jira",
