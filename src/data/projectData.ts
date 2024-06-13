@@ -202,16 +202,11 @@ export const projectData: IProject = {
   currentPhaseIndex: 2,
   phases: kmTrackerPhases,
   currentPeriod: {
-    start: new Date(2024, 4, 30),
-    end: new Date(2024, 5, 6),
+    start: new Date(2024, 5, 6),
+    end: new Date(2024, 5, 13),
   },
   problems: [],
   periodActivities: [
-    {
-      name: "Melhorias de experiência/Resolução de bugs",
-      expectedDays: 4,
-      status: "done",
-    },
     {
       name: "Seleção de clientes para roteirização",
       expectedDays: 4,
@@ -240,6 +235,16 @@ export const projectData: IProject = {
     {
       name: "Subir dados atualizados",
       expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Gerar link de roteirização",
+      expectedDays: 4,
+      status: "done",
+    },
+    {
+      name: "Mostrar listagem de roteirizações criadas",
+      expectedDays: 4,
       status: "doing",
     },
     {
@@ -253,9 +258,5 @@ export const projectData: IProject = {
     //   status: "to do",
     // },
   ],
-  nextSteps: [
-    "Testar API Jira",
-    "Finalizar roteirização",
-    "Subir dados atualizados",
-  ],
+  nextSteps: ["Testar API Jira", "Mostrar listagem de roteirizações criadas"],
 };
