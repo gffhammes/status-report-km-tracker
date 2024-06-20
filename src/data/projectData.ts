@@ -202,45 +202,20 @@ export const projectData: IProject = {
   currentPhaseIndex: 2,
   phases: kmTrackerPhases,
   currentPeriod: {
-    start: new Date(2024, 5, 6),
-    end: new Date(2024, 5, 13),
+    start: new Date(2024, 5, 13),
+    end: new Date(2024, 5, 20),
   },
   problems: [],
   periodActivities: [
     {
-      name: "Seleção de clientes para roteirização",
+      name: "Subir dados de OSs do WKF",
       expectedDays: 4,
       status: "done",
     },
     {
-      name: "Alterar cor da topologia com base no status da OS",
+      name: "Melhorias de experiência e correção de bugs",
       expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Criar roteirização com base nos clientes informados",
-      expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Obter dados adicionais para realizar a roteirização",
-      expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Apresentar resumo da roteirização em tela",
-      expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Subir dados atualizados",
-      expectedDays: 4,
-      status: "done",
-    },
-    {
-      name: "Gerar link de roteirização",
-      expectedDays: 4,
-      status: "done",
+      status: "doing",
     },
     {
       name: "Mostrar listagem de roteirizações criadas",
