@@ -1,6 +1,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 import { projectData } from "../data/projectData";
 import EastIcon from "@mui/icons-material/East";
+import { ProjectTrafficLights } from "./ProjectTrafficLights";
 
 export interface IProjectGeneralDataProps {}
 
@@ -11,7 +12,17 @@ export const ProjectGeneralData = () => {
         <Typography variant="overline" fontSize={20}>
           status report
         </Typography>
-        <Typography variant="h1">{projectData.name}</Typography>
+
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="flex-start"
+          gap={2}
+        >
+          <Typography variant="h1">{projectData.name}</Typography>
+
+          <ProjectTrafficLights />
+        </Stack>
 
         <Stack direction="row" alignItems="center" gap={2} color="#7c7c7c">
           <Typography fontSize={24} textTransform="uppercase">
